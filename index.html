@@ -244,11 +244,11 @@
             <h1 class="title is-1 publication-title">MobileSplat: Real-Time Streaming and Rendering of City-Scale 3D Scenes for Mobile Platforms</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
-                  <div class="authors">
+                  <!-- <div class="authors">
                     <span class="author-block">
                       Anynomous Author
                     </span>
-                  </div>
+                  </div> -->
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
@@ -320,9 +320,11 @@
         <div class="content has-text-justified">
           <!-- TODO: Replace with your paper abstract -->
           <p>
-    There is a growing demand for high-fidelity, interactive 3D web content, spurred by its adoption in fields like digital twins, cultural heritage, and e-commerce.
-    However, 3D Gaussian Splatting (3DGS), the state-of-the-art technique for generating such photorealistic scenes, typically produces monolithic, multi-gigabyte files that are fundamentally incompatible with the progressive loading and resource limits of standard web browsers. To bridge this gap, we present MobileSplat, an end-to-end system to enable the seamless streaming and real-time rendering of city-scale scenes on the web.
-    Our contributions are threefold. First, MobileSplat novelly splits massive 3DGS data into a spatial tile hierarchy with quality-preserving levels of detail (LOD), maintaining high visual fidelity across view distances. Second, we propose adaptive streaming protocol combining real-time trajectory prediction with adaptive quality selection under varying network conditions. Third, our WebGL-optimized rendering pipeline with hierarchical cache management achieves 30+ FPS rendering on city-scale scenes.  Extensive evaluation demonstrates MobileSplat uniquely renders scenes that cause competing systems to fail (out-of-memory), achieving superior visual quality with 2.2&times; bandwidth reduction versus commercial progressive streaming and 4.3&times; versus full-scene loading. Trajectory prediction improves cache hit rates from 68.3% to 91.2%, reducing time-to-good-quality by 42%. These results validate that tile-based streaming with predictive prefetching successfully deploys photorealistic 3D content within browser constraints. Demo can be found at: \href{https://anonymous.4open.science/r/MobileSplat-7982}{\repo}.
+The demand for high-fidelity, interactive 3D content on mobile devices is accelerating, driven by applications in mobile digital twins, augmented tourism, and immersive e-commerce.
+    However, 3D Gaussian Splatting (3DGS), the state-of-the-art technique for photorealistic reconstruction, produces monolithic, multi-gigabyte datasets that are fundamentally incompatible with the fluctuating bandwidth of wireless networks and the strict memory constraints of mobile hardware. To bridge this gap, we present MobileSplat, an end-to-end system to enable the seamless streaming and real-time rendering of city-scale scenes in resource-constrained mobile environments.
+
+
+    Our contributions are threefold. First, MobileSplat partitions massive 3DGS data into a spatial tile hierarchy with quality-preserving levels of detail (LOD), ensuring high visual fidelity while minimizing payload size for wireless transmission. Second, we propose a bandwidth-adaptive streaming protocol that integrates lightweight, on-device trajectory prediction with deadline-constrained quality selection to mitigate high network latency. Third, our resource-optimized rendering pipeline implements a hierarchical cache management strategy, achieving 30+ FPS on consumer mobile hardware. Extensive evaluation demonstrates MobileSplat uniquely renders scenes that cause competing systems to fail (out-of-memory), achieving superior visual quality with 2.2$\times$ bandwidth reduction versus commercial progressive streaming and 4.3$\times$ versus full-scene loading. Trajectory prediction improves cache hit rates from 68.3\% to 91.2\%, reducing time-to-good-quality by 42\%. These results validate that tile-based streaming with predictive prefetching effectively balances visual fidelity and system responsiveness under strict mobile resource constraints.
           </p>
         </div>
       </div>
